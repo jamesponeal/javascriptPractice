@@ -10,8 +10,8 @@ if (isNaN(lowerLimit) || isNaN(upperLimit)) {
   throw new Error('You have entered an invalid number!');
 }
 
-
-console.log(randomNumber(upperLimit, lowerLimit));
-console.log(randomNumber(upperLimit, lowerLimit));
-console.log(randomNumber(upperLimit, lowerLimit));
+document.write("<h2>Three Random Numbers:</h2>");
+document.write("<h2>" + randomNumber(upperLimit, lowerLimit) + "</h2>");
+document.write("<h2>" + randomNumber(upperLimit, lowerLimit) + "</h2>");
+document.write("<h2>" + randomNumber(upperLimit, lowerLimit) + "</h2>");
 
