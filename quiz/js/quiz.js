@@ -2,22 +2,40 @@ var numCorrect = 0;
 var quiz = [
   ["What is your favorite color?", "blue"],
   ["What is your favorite food?", "pizza"],
-  ["What is your quest?", "I seek the holy grail"]
-]
+  ["How many states are there?", "50"]
+];
+var answer;
+var correct = [];
+var wrong = [];
 
 function print(message) {
-  document.write(message);
+  document.getElementById('output');
+  output.innerHTML += message;
 }
 
 
-for(i=0; i < quiz.length; i += 1){
+for(var i = 0; i < quiz.length; i += 1){
   var answer = prompt(quiz[i][0]);
-  if(answer == quiz[i][1]){
+  if(answer === quiz[i][1]){
     numCorrect += 1;
-    alert("CORRECT!!");
+    correct.push(quiz[i][0]);
   } else {
-    alert("Wrong... bummer!");
+    wrong.push(quiz[i][0]);
   }
 }
 
-print("Out of " + quiz.length + " questions, you correctly answered " + numCorrect + ".");
+print("<h2>Out of " + quiz.length + " questions, you correctly answered " + numCorrect + ".</h2>");
+
+if( correct.length > 0 ){
+  print("<p>You answered the following questions correctly:</p>");
+  for(var i = 0; i < correct.length; i++ ){
+    print( " - " + correct[i] + "<br>" );
+  }
+};
+
+if( wrong.length > 0 ){
+  print("<p>You answered the following questions wrong:</p>");
+  for(var i = 0; i < wrong.length; i++ ){
+    print( " - " + wrong[i] + "<br>" );
+  }
+};
