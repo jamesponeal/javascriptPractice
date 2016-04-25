@@ -1,2 +1,3 @@
-$(".warning").hide();
-$(".warning").show("slow");
+$(document).ready(function(){
+  $(".warning").hide().show("slow");
+});
