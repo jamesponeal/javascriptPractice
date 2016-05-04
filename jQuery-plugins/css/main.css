@@ -342,6 +342,20 @@ footer {
   }
 }
 
-header {
+.header {
   background-color: white;
+  transition: 1s;
 }
+.is-sticky .header {
+  background-color: black;
+}
+
+.want-us {
+  transition: 1s;
+}
+
+.is-sticky .want-us {
+  background-color: white;
+  opacity: 1;
+}
+
