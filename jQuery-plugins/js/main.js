@@ -9,7 +9,8 @@ $(".animsition").animsition({
 $(".header").sticky({
   topSpacing:0,
   getWidthFrom: '.container',
-  responsiveWidth: true
+  responsiveWidth: true,
+  zIndex: 1000
 });
 
 $(".header").on('sticky-start', function(){
@@ -32,4 +33,22 @@ $(".want-us").on('sticky-start', function(){
 
 $(".want-us").on('sticky-end', function(){
   $(".want-us").html('Want us to work on your project?');
+});
+
+$('.slides').slick({
+  fade: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  dots: true
+});
+
+$('.team-slides').slick({
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: true,
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
 });

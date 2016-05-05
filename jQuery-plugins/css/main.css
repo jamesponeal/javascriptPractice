@@ -176,18 +176,18 @@ nav a.active {
 .yellow {
   background: #FFD365;
 }
-.slick-dots {
+/*.slick-dots {
   position: absolute;
   width: 100%;
   bottom: 20px;
   left: 0;
-}
+}*/
 .slick-dots li button:before {
   font-size: 16px;
-  color: #fff;
+  color: #000000;
 }
 .slick-dots li.slick-active button:before {
-  color: #fff;
+  color: #000000;
 }
 
 /*Footer*/
@@ -240,7 +240,7 @@ footer {
   background: #fff;
   padding: 12px 0;
   margin: 0;
-  opacity: .95;
+  opacity: 1;
 }
 
 /*Team*/
@@ -325,9 +325,7 @@ footer {
     width: 80%;
     margin: 100px 10%;
   }
-  .slick-dots {
-    top: 20px;
-  }
+
   .frame {
     margin: 40px 0 0;
   }
@@ -348,6 +346,7 @@ footer {
 }
 .is-sticky .header {
   background-color: black;
+  z-index: 1000;
 }
 
 .want-us {
@@ -359,3 +358,45 @@ footer {
   opacity: 1;
 }
 
+/* slick styles */
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before{
+  font-size: 20px;
+}
+
+.team-slides .slick-dots {
+  bottom: -20px;
+  z-index: 1;
+}
+
+.slick-prev::after {
+    color: black;
+    font-size: 18px;
+    padding-right: 0.5em;
+}
+
+.slick-next::after {
+    color: black;
+    font-size: 18px;
+    padding-right: 0.5em;
+}
+
+.slick-prev::after {
+    content: "\f137";
+    font-family: FontAwesome;
+    color: #000;
+    font-size: 18px;
+    padding-right: 0.5em;
+}
+
+.slick-next::after {
+    content: "\f138";
+    font-family: FontAwesome;
+    color: #000;
+    font-size: 18px;
+    margin-right: 0.5em;
+    padding-right: 0.5em;
+}
