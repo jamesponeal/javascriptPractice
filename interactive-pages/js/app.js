@@ -57,3 +57,4 @@ function taskIncomplete(){
 
 
 //Set the click handler to the addTask function
+addButton.onclick = addTask;
