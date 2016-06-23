@@ -1,20 +1,21 @@
-function Song(title, artist, duration) {
+function Movie(title, year, duration) {
   Media.call(this, title, duration);
-  this.artist = artist;
+  this.year = year;
 }
 
 //Create inheritance with Media object
-Song.prototype = Object.create(Media.prototype);
+Movie.prototype = Object.create(Media.prototype);
 
-Song.prototype.toHTML = function(){
+Movie.prototype.toHTML = function(){
   var htmlString = '<li';
   if(this.isPlaying){
     htmlString += ' class="current"';
   }
   htmlString += '>';
   htmlString += this.title;
-  htmlString += ' - '
-  htmlString += this.artist;
+  htmlString += ' (';
+  htmlString += this.year;
+  htmlString += ') ';
   htmlString += '<span class="duration">';
   htmlString += this.duration;
   htmlString += '</span></li>';
