@@ -26,6 +26,15 @@ Playlist.prototype.next = function() {
   this.play();
 };
 
+Playlist.prototype.back = function(){
+  this.stop();
+  this.nowPlayingIndex--;
+  if(this.nowPlayingIndex < 0){
+    this.nowPlayingIndex = this.songs.length-1;
+  }
+  this.play();
+}
+
 Playlist.prototype.renderInElement = function(list) {
   list.innerHTML = "";
   for(var i = 0; i < this.songs.length; i++){
