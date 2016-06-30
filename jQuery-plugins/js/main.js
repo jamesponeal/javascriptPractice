@@ -1,6 +1,6 @@
 $(".animsition").animsition({
-  inClass: 'zoom-in-lg',
-  outClass: 'zoom-out-lg',
+  inClass: 'fade-in',
+  outClass: 'fade-out',
   linkElement: 'header a',
   inDuration: 1000,
   outDuration: 500
@@ -44,11 +44,11 @@ $('.slides').slick({
 });
 
 $('.team-slides').slick({
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
   arrows: true,
   dots: true,
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 1
 });
